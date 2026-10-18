@@ -1,0 +1,34 @@
+# Build outputs
+bin/
+obj/
+target/
+dist/
+out/
+publish/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local data, secrets, generated state
+.env
+.env.*
+*.local
+data/
+artifacts/
+volumes/
+*.db
+*.sqlite
+*.sqlite3
+logs/
+*.log
+
+# Editors / OS
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
