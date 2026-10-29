@@ -138,7 +138,7 @@ func Scan(ctx context.Context, path string) (Manifest, error) {
 		if len(m.Entries) >= MaxEntries {
 			return document.Fail("ResourceLimit", "tree exceeds 10000 entries")
 		}
-		key, err := Path(name)
+		key, err := TreePath(name)
 		if err != nil {
 			return err
 		}

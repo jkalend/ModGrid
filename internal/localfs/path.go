@@ -14,6 +14,14 @@ const MaxTreeBytes int64 = 2147483648
 const MaxEntries = 10000
 
 func Path(name string) (string, error) {
+	return pathPolicy(name, false)
+}
+
+// TreePath is the installed-runtime tree policy. Official Maven/Fabric paths
+// contain '+'. Archive-import PortablePathV1 remains the stricter Path policy.
+func TreePath(name string) (string, error) { return pathPolicy(name, true) }
+
+func pathPolicy(name string, native bool) (string, error) {
 	parts := strings.Split(name, "/")
 	if name == "" || len(parts) > 32 {
 		return "", document.Fail("UnsafePath", "empty path or path depth exceeds 32")
@@ -29,13 +37,13 @@ func Path(name string) (string, error) {
 			return "", document.Fail("UnsafePath", "invalid path component")
 		}
 		for _, c := range p {
-			if !(c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z' || c >= '0' && c <= '9' || c == '.' || c == '_' || c == '-') {
+			if !(c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z' || c >= '0' && c <= '9' || c == '.' || c == '_' || c == '-' || (native && c == '+')) {
 				return "", document.Fail("UnsupportedPathCharacter", "PortablePathV1 accepts ASCII letters, digits, dot, underscore and hyphen")
 			}
 		}
 	}
 	max := 2048
-	if runtime.GOOS == "windows" {
+	if runtime.GOOS == "windows" && !native {
 		max = 180
 	}
 	if len(name) > max {
@@ -45,7 +53,7 @@ func Path(name string) (string, error) {
 }
 
 func TargetPath(root, name string) error {
-	if _, err := Path(name); err != nil {
+	if _, err := TreePath(name); err != nil {
 		return err
 	}
 	full, err := filepath.Abs(filepath.Join(root, filepath.FromSlash(name)))
@@ -53,9 +61,6 @@ func TargetPath(root, name string) error {
 		return err
 	}
 	max := 3072
-	if runtime.GOOS == "windows" {
-		max = 240
-	}
 	if len(full) > max {
 		return document.Fail("ResourceLimit", "fully qualified target path exceeds platform budget")
 	}

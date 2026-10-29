@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "modgrid-fixture",
+  "version": "1.0.0",
+  "name": "ModGrid authored test fixture",
+  "environment": "server",
+  "entrypoints": { "server": ["dev.modgrid.fixture.BootstrapFixture"] },
+  "depends": { "fabricloader": "=0.19.5", "minecraft": "=1.21.1", "java": ">=21" },
+  "license": "LicenseRef-ModGrid-Private"
+}

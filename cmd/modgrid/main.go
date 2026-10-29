@@ -48,6 +48,9 @@ func run(args []string, stdout, stderr io.Writer) error {
 	if args[0] == "pack" || args[0] == "cache" || args[0] == "instance" {
 		return localCommand(args, stdout, stderr)
 	}
+	if args[0] == "server" || args[0] == "runtime" {
+		return serverCommand(args, stdout, stderr)
+	}
 	if args[0] == "--help" || args[0] == "-h" {
 		_, err := fmt.Fprintln(stdout, usage+"\n       modgrid pack export/verify | cache add/verify | instance init/inspect/checkpoint/restore/rollback/pin/unpin/reconcile/gc\n       modgrid --version")
 		return err
