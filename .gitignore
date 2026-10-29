@@ -5,6 +5,7 @@ target/
 dist/
 out/
 publish/
+/coverage*.out
 
 # Python
 __pycache__/

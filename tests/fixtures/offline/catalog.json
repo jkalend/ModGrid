@@ -1,0 +1,279 @@
+{
+  "schema": "modgrid.catalog.v1",
+  "id": "offline-v1",
+  "artifacts": [
+    {
+      "project": "helper",
+      "version": "1.0.0",
+      "version_id": "helper-1.0.0",
+      "file_id": "helper-1",
+      "source": {
+        "id": "authored",
+        "revision": "offline-v1",
+        "facts": "ModGrid authored FixtureVersionV1 metadata; no provider translation"
+      },
+      "size_bytes": 40,
+      "sha512": "sha512:937ea117e888d4d8913582cde6b44a046676d73363127b8dc6717696a6f87686d604052f69f20bd13927b0f9b5b90b19cea2486657f1ecae07e223a0bfe529ea",
+      "minecraft": "1.21.1",
+      "loader": {
+        "id": "fabric",
+        "version": "0.19.5"
+      },
+      "compatibility_evidence": "Synthetic tuple for resolver tests only; no runtime compatibility claim",
+      "sides": {
+        "client": "required",
+        "server": "required"
+      },
+      "original_sides": "authored client=required,server=required",
+      "dependencies": [],
+      "license": "LicenseRef-ModGrid-Private",
+      "rights": {
+        "status": "local-use",
+        "evidence": "Project-authored synthetic metadata and text payload; local testing under the private repository license"
+      }
+    },
+    {
+      "project": "helper",
+      "version": "1.5.0",
+      "version_id": "helper-1.5.0",
+      "file_id": "helper-15",
+      "source": {
+        "id": "authored",
+        "revision": "offline-v1",
+        "facts": "ModGrid authored FixtureVersionV1 metadata; no provider translation"
+      },
+      "size_bytes": 41,
+      "sha512": "sha512:bb2fcb1f5c704c7c1f49904305769965a91138ae29bec2779efebc6c0e9ee8bd1df0e07200ae216c4e06ca55cac6d609128a2b0c855f598e23a0c5ad827fe0bd",
+      "minecraft": "1.21.1",
+      "loader": {
+        "id": "fabric",
+        "version": "0.19.5"
+      },
+      "compatibility_evidence": "Synthetic tuple for resolver tests only; no runtime compatibility claim",
+      "sides": {
+        "client": "required",
+        "server": "required"
+      },
+      "original_sides": "authored client=required,server=required",
+      "dependencies": [
+        {
+          "original": "authored helper 1.5 requires marker >=1.0.0,<2.0.0",
+          "optional": false,
+          "project": "marker",
+          "constraint": ">=1.0.0,<2.0.0"
+        }
+      ],
+      "license": "LicenseRef-ModGrid-Private",
+      "rights": {
+        "status": "local-use",
+        "evidence": "Project-authored synthetic metadata and text payload; local testing under the private repository license"
+      }
+    },
+    {
+      "project": "marker",
+      "version": "1.0.0",
+      "version_id": "marker-1.0.0",
+      "file_id": "marker-1",
+      "source": {
+        "id": "authored",
+        "revision": "offline-v1",
+        "facts": "ModGrid authored FixtureVersionV1 metadata; no provider translation"
+      },
+      "size_bytes": 40,
+      "sha512": "sha512:09ad85811c63c0a4c6ba160205763e3101151e3d4b2ac90994b4b6536e20c7c74af164b49fc6893629e08c00cb95edf138e0c881c4d5f7db87d590823812d244",
+      "minecraft": "1.21.1",
+      "loader": {
+        "id": "fabric",
+        "version": "0.19.5"
+      },
+      "compatibility_evidence": "Synthetic tuple for resolver tests only; no runtime compatibility claim",
+      "sides": {
+        "client": "required",
+        "server": "required"
+      },
+      "original_sides": "authored client=required,server=required",
+      "dependencies": [
+        {
+          "original": "authored marker 1 requires helper >=1.0.0,<2.0.0",
+          "optional": false,
+          "project": "helper",
+          "constraint": ">=1.0.0,<2.0.0"
+        },
+        {
+          "original": "authored marker 1 optionally uses cosmetics 1.0.0",
+          "optional": true,
+          "project": "cosmetics",
+          "constraint": "1.0.0"
+        },
+        {
+          "original": "authored marker 1 optionally uses telemetry 1.0.0",
+          "optional": true,
+          "project": "telemetry",
+          "constraint": "1.0.0"
+        }
+      ],
+      "license": "LicenseRef-ModGrid-Private",
+      "rights": {
+        "status": "local-use",
+        "evidence": "Project-authored synthetic metadata and text payload; local testing under the private repository license"
+      }
+    },
+    {
+      "project": "marker",
+      "version": "2.0.0",
+      "version_id": "marker-2.0.0",
+      "file_id": "marker-2",
+      "source": {
+        "id": "authored",
+        "revision": "offline-v1",
+        "facts": "ModGrid authored FixtureVersionV1 metadata; no provider translation"
+      },
+      "size_bytes": 40,
+      "sha512": "sha512:de1aeaeb389604eafdab55f96d6c1452be88c6849632effb1c63d9f045c4b308727a1f05b45305c26efc08c110070fc681e3d20557788c73eedcd59d08320a0c",
+      "minecraft": "1.21.1",
+      "loader": {
+        "id": "fabric",
+        "version": "0.19.5"
+      },
+      "compatibility_evidence": "Synthetic tuple for resolver tests only; no runtime compatibility claim",
+      "sides": {
+        "client": "required",
+        "server": "required"
+      },
+      "original_sides": "authored client=required,server=required",
+      "dependencies": [
+        {
+          "original": "authored marker 2 requires unavailable helper >=2.0.0",
+          "optional": false,
+          "project": "helper",
+          "constraint": ">=2.0.0"
+        }
+      ],
+      "license": "LicenseRef-ModGrid-Private",
+      "rights": {
+        "status": "local-use",
+        "evidence": "Project-authored synthetic metadata and text payload; local testing under the private repository license"
+      }
+    },
+    {
+      "project": "clienthud",
+      "version": "1.0.0",
+      "version_id": "clienthud-1.0.0",
+      "file_id": "clienthud-1",
+      "source": {
+        "id": "authored",
+        "revision": "offline-v1",
+        "facts": "ModGrid authored FixtureVersionV1 metadata; no provider translation"
+      },
+      "size_bytes": 43,
+      "sha512": "sha512:f566c255fabb918e35b6482bdaf2002b1be53ce62ba6eeb81a99f46f7bad48bd4e9708daf0b05da677b9f3acaf11b5a0db49938cb5b6cf095a600d5bff0e22fc",
+      "minecraft": "1.21.1",
+      "loader": {
+        "id": "fabric",
+        "version": "0.19.5"
+      },
+      "compatibility_evidence": "Synthetic tuple for resolver tests only; no runtime compatibility claim",
+      "sides": {
+        "client": "required",
+        "server": "unsupported"
+      },
+      "original_sides": "authored client=required,server=unsupported",
+      "dependencies": [],
+      "license": "LicenseRef-ModGrid-Private",
+      "rights": {
+        "status": "local-use",
+        "evidence": "Project-authored synthetic metadata and text payload; local testing under the private repository license"
+      }
+    },
+    {
+      "project": "servertools",
+      "version": "1.0.0",
+      "version_id": "servertools-1.0.0",
+      "file_id": "servertools-1",
+      "source": {
+        "id": "authored",
+        "revision": "offline-v1",
+        "facts": "ModGrid authored FixtureVersionV1 metadata; no provider translation"
+      },
+      "size_bytes": 45,
+      "sha512": "sha512:9030c14aa10b70d198b1f9bef14ad4e5ac56ae0e47128311a47f353e05b80a5f3a0664e6a0177cc1663cc3dc4e055c6fe0b0acb3e32b14073e7a4518e8c0f96a",
+      "minecraft": "1.21.1",
+      "loader": {
+        "id": "fabric",
+        "version": "0.19.5"
+      },
+      "compatibility_evidence": "Synthetic tuple for resolver tests only; no runtime compatibility claim",
+      "sides": {
+        "client": "unsupported",
+        "server": "required"
+      },
+      "original_sides": "authored client=unsupported,server=required",
+      "dependencies": [],
+      "license": "LicenseRef-ModGrid-Private",
+      "rights": {
+        "status": "local-use",
+        "evidence": "Project-authored synthetic metadata and text payload; local testing under the private repository license"
+      }
+    },
+    {
+      "project": "cosmetics",
+      "version": "1.0.0",
+      "version_id": "cosmetics-1.0.0",
+      "file_id": "cosmetics-1",
+      "source": {
+        "id": "authored",
+        "revision": "offline-v1",
+        "facts": "ModGrid authored FixtureVersionV1 metadata; no provider translation"
+      },
+      "size_bytes": 43,
+      "sha512": "sha512:ff102ff5d9c99bc5e5cc86c2418e3c07975d43a16acce0708c17622910d9165f5c534e52b8c847f557f04a83844eb0302929330b89f040b51e5ac2283dafeb8d",
+      "minecraft": "1.21.1",
+      "loader": {
+        "id": "fabric",
+        "version": "0.19.5"
+      },
+      "compatibility_evidence": "Synthetic tuple for resolver tests only; no runtime compatibility claim",
+      "sides": {
+        "client": "optional",
+        "server": "optional"
+      },
+      "original_sides": "authored client=optional,server=optional",
+      "dependencies": [],
+      "license": "LicenseRef-ModGrid-Private",
+      "rights": {
+        "status": "local-use",
+        "evidence": "Project-authored synthetic metadata and text payload; local testing under the private repository license"
+      }
+    },
+    {
+      "project": "telemetry",
+      "version": "1.0.0",
+      "version_id": "telemetry-1.0.0",
+      "file_id": "telemetry-1",
+      "source": {
+        "id": "authored",
+        "revision": "offline-v1",
+        "facts": "ModGrid authored FixtureVersionV1 metadata; no provider translation"
+      },
+      "size_bytes": 43,
+      "sha512": "sha512:6f79ca486f17af18dd8723200a83e2374f77d69b89778899f2993bde5ef7ac22ca82c83baa0e9ddd6e08557ddb1ddcb10aab00f28f311eec55b66258aa7baa4a",
+      "minecraft": "1.21.1",
+      "loader": {
+        "id": "fabric",
+        "version": "0.19.5"
+      },
+      "compatibility_evidence": "Synthetic tuple for resolver tests only; no runtime compatibility claim",
+      "sides": {
+        "client": "optional",
+        "server": "optional"
+      },
+      "original_sides": "authored client=optional,server=optional",
+      "dependencies": [],
+      "license": "LicenseRef-ModGrid-Private",
+      "rights": {
+        "status": "local-use",
+        "evidence": "Project-authored synthetic metadata and text payload; local testing under the private repository license"
+      }
+    }
+  ]
+}

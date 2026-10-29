@@ -1,0 +1,24 @@
+{
+  "schema": "modgrid.pack.v1",
+  "id": "offline-server",
+  "catalog_id": "offline-v1",
+  "catalog_sha256": "sha256:ac3d2d3157e9a6ccc26234eb10dab42a071d1628d99b9cb414fdb23dfaa8a6f5",
+  "target": {
+    "minecraft": "1.21.1",
+    "loader": {"id": "fabric", "version": "0.19.5"},
+    "java_major": 21,
+    "platform": "windows/amd64",
+    "side": "server"
+  },
+  "roots": [
+    {"project": "marker", "constraint": ">=1.0.0,<3.0.0", "sides": ["client", "server"], "optional": false},
+    {"project": "clienthud", "constraint": "1.0.0", "sides": ["client"], "optional": false},
+    {"project": "servertools", "constraint": "1.0.0", "sides": ["server"], "optional": false},
+    {"project": "telemetry", "constraint": "1.0.0", "sides": ["client", "server"], "optional": true}
+  ],
+  "choices": [
+    {"project": "cosmetics", "include": true},
+    {"project": "telemetry", "include": false}
+  ],
+  "configs": []
+}
