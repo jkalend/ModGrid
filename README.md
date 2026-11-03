@@ -125,7 +125,11 @@ test. The full workflow and Windows/Linux runtime qualification remain open.
 
 ## License
 
-Private. All rights reserved until a license is chosen.
+## License
+
+Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
+
+Copyright 2026 jkalend. Third-party dependencies retain their own licenses.
 
 Public source: [jkalend/ModGrid](https://github.com/jkalend/ModGrid). Public
 visibility does not change the [license](LICENSE). CI checks both Windows and
